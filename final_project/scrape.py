@@ -22,8 +22,9 @@ import time
 USERNAME = os.getenv('CANVAS_USERNAME')
 PASSWORD = os.getenv('CANVAS_PASSWORD')
 
-LOG_PATH = os.path.abspath('./../temp_data/net_log.json')
-VIDEO_PATH = os.path.abspath('./../videos')
+LOG_PATH = os.path.abspath('./../data/tmp/net_log.json')
+DRIVER_PATH = os.path.abspath('./../data/drivers/chromedriver')
+VIDEO_PATH = os.path.abspath('./../data/videos')
 
 
 def generate_driver():
@@ -33,7 +34,7 @@ def generate_driver():
     chrome_options.add_argument('--log-net-log={}'.format(LOG_PATH))
     
     # start the driver
-    driver = webdriver.Chrome(executable_path='./../drivers/chromedriver', options=chrome_options) # TODO: add some comment about drivers...
+    driver = webdriver.Chrome(executable_path=DRIVER_PATH, options=chrome_options) # TODO: add some comment about drivers...
     
     return driver
 
@@ -344,6 +345,7 @@ def get_title_to_urls2(title_to_urls):
     return title_to_urls2
 
 
+# NOTE: not used in Luigi
 def download_video(URL, player, video_name, max_time=None):
     if max_time is None:
         max_time = 60*20 # setting a hard cap of 20min for a single download
