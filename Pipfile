@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+notebook = "*"
+
+[packages]
+setuptools-scm = "*"
+tqdm = "*"
+selenium = "*"
+beautifulsoup4 = "*"
+luigi = "*"
+boto3 = "*"
+requests = "*"
+
+[requires]
+python_version = "3.7"
