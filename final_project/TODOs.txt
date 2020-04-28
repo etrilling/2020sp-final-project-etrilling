@@ -1,16 +1,12 @@
-- modify finds
-- change " --> '
-- break up big/complex functions
-- make a get data --> save it function ???
-
-
 do updates
 - use more complex data structures (more dicts?) to help store values clearly!
 - also, make better functions!!! sometimes, fewer but longer functions is good! separate on how tasks break apart...
+    - break up big/complex functions
+
+HAVE YOU DONE ALL UPDATES?! Do final touches on things you were putting off!
 
 
 do
-- write clever tasks
 - write glacier task
     - go to glacier for "advanced"? write your own Luigi task... S3 for basic...
 - panopto: grab slides (change "wait")
