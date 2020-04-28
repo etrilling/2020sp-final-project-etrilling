@@ -14,9 +14,9 @@ install:
   - pipenv install --ignore-pipfile --deploy --system # not sure if the --system tag does anything as each job is on a new machine...
 
 stages:
-  - test
-  - name: answers
-    if: branch = master
+  # - test
+  # - name: answers
+  #  if: branch = master
 
 jobs:
   include:
@@ -32,4 +32,4 @@ jobs:
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - stage: answers
       script:
-        # - python3 -m final_project
+        - python3 -m final_project
