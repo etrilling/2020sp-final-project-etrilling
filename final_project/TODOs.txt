@@ -1,19 +1,19 @@
-do updates
-- use more complex data structures (more dicts?) to help store values clearly!
-- also, make better functions!!! sometimes, fewer but longer functions is good! separate on how tasks break apart...
-    - break up big/complex functions
-
-HAVE YOU DONE ALL UPDATES?! Do final touches on things you were putting off!
-
-- make command line slides
-
-
 do
-- write glacier task
-    - go to glacier for "advanced"? write your own Luigi task... S3 for basic...
 - panopto: grab slides (change "wait")
     - the "thumbnails" are actually the full image files and the time stamps are all correct!
+    - complex dicts for this!!!
 - write a command line tool to work with this
+    - commands
+        - download_lectures
+        - upload_lectures
+    - instructions
+        - put canvas username/password in .env
+        - put aws info in .env
+    - input
+        - canvas lecture page
+    - flags
+        - allow overrides for VIDEO_PATH and S3_ROOT
+        - add timeout_max flag (no flag assumes full videos)
 
 
 logistics
@@ -21,6 +21,7 @@ logistics
 - readme
 	- add setup instructions (note that only chrome/chromeium can be used!)
 	- add explanation
-- write tests as needed...
+        - rough outline of code
+- (be lazy!!!) write some tests
 
 note: the final project you submit can be different from the code you use! be smart with this!
