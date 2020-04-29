@@ -5,12 +5,15 @@ do updates
 
 HAVE YOU DONE ALL UPDATES?! Do final touches on things you were putting off!
 
+- make command line slides
+
 
 do
 - write glacier task
     - go to glacier for "advanced"? write your own Luigi task... S3 for basic...
 - panopto: grab slides (change "wait")
     - the "thumbnails" are actually the full image files and the time stamps are all correct!
+- write a command line tool to work with this
 
 
 logistics
