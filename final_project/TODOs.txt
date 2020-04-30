@@ -15,6 +15,11 @@ do
         - allow overrides for VIDEO_PATH and S3_ROOT
         - add timeout_max flag (no flag assumes full videos)
 
+- add nicer progress bars!
+
+get this "do" done! finish the project by thrusday!
+
+
 
 logistics
 - add docstrings to code
