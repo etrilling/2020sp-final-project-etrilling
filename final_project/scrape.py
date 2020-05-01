@@ -21,7 +21,7 @@ CANVAS_PASSWORD = os.getenv('CANVAS_PASSWORD')
 
 from .globals import *
 LOG_PATH = os.path.join(DATA_PATH, 'tmp/net_log.json')
-DRIVER_PATH = os.path.join(DATA_PATH, 'drivers/chromedriver.exe')
+DRIVER_PATH = os.path.join(DATA_PATH, 'drivers/chromedriver')
 
 DEFAULT_TIMEOUT = 30
 
