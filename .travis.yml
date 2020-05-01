@@ -8,15 +8,17 @@ python:
 before_install:
   - echo -e "machine github.com\nlogin $CI_USER_TOKEN" > ~/.netrc
 
-# command to run tests, e.g. python setup.py test
+
 install:
-  # "- pip install pipenv" is a redundant command...
-  - pipenv install --ignore-pipfile --deploy --system # not sure if the --system tag does anything as each job is on a new machine...
+  - pip install pipenv
+  - pipenv install --ignore-pipfile --deploy
+
 
 stages:
   # - test
   # - name: answers
   #  if: branch = master
+  - answers
 
 jobs:
   include:
@@ -32,4 +34,4 @@ jobs:
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - stage: answers
       script:
-        - python3 -m final_project
+        - pipenv run python3 -m final_project upload https://canvas.harvard.edu/courses/69812/external_tools/22940
