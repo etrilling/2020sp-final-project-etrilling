@@ -1,5 +1,7 @@
-temp_data
-videos
+data/videos
+data/tmp/luigi_cache/*
+data/tmp/net_log.json
+drivers/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
