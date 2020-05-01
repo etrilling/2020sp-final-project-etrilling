@@ -18,7 +18,7 @@ def main():
     
     if args.command == 'download':
         build([DownloadAllLectures(**params)], local_scheduler=True)
-    elif args.action == 'upload':
+    elif args.command == 'upload':
         build([UploadAllLectures(**params)], local_scheduler=True)
     
     print('done!')
