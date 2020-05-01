@@ -2,11 +2,11 @@ from .luigi_tasks import DownloadAllLectures, UploadAllLectures
 import argparse
 
 
-parser = argparse.ArgumentParser(description='TODO?! Command description.', allow_abbrev=False)
-parser.add_argument('action', choices=['download', 'upload'], help='TODO')
-parser.add_argument('target_url', help='TODO')
-parser.add_argument('--full', help='TODO', action='store_true')
-parser.add_argument('--process_slides', help='TODO', action='store_true')
+parser = argparse.ArgumentParser(allow_abbrev=False)
+parser.add_argument('command', choices=['download', 'upload'], help='action to take')
+parser.add_argument('target_url', help='Canvas URL to download from')
+parser.add_argument('--full', help='do a full run (not a just a test run)', action='store_true')
+parser.add_argument('--process_slides', help='download slides (only effects Panopto player)', action='store_true')
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
               'process_slides': args.process_slides,
               'is_test_run': not args.full}
     
-    if args.action == 'download':
+    if args.command == 'download':
         build([DownloadAllLectures(**params)], local_scheduler=True)
     elif args.action == 'upload':
         build([UploadAllLectures(**params)], local_scheduler=True)

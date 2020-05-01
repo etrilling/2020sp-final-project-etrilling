@@ -2,11 +2,6 @@ done by thursday evening!!! can review on saturday!
 
 
 logistics
-- readme
-	- add setup instructions (note that only chrome/chromeium can be used!)
-	- add explanation
-        - rough outline of code
-        - put data into config
 - (be lazy!!!) write some tests
 
 note: the final project you submit can be different from the code you use! be smart with this!
