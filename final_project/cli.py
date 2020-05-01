@@ -22,4 +22,6 @@ def main():
     elif args.command == 'upload':
         build([UploadAllLectures(**params)], local_scheduler=True)
     
-    print('done!')
+    print('*'*100 + '\n' + '*'*100)
+    print('THE PROGRAM HAS FINISHED RUNNING!')
+    print('*'*100 + '\n' + '*'*100)
