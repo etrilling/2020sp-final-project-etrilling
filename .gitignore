@@ -1,7 +1,14 @@
-data/videos
+data/videos/*
+!data/videos/.gitkeep 
+
 data/tmp/luigi_cache/*
+!data/tmp/luigi_cache/.gitkeep
+
 data/tmp/net_log.json
-drivers/*
+
+data/drivers/*
+!data/drivers/.gitkeep
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

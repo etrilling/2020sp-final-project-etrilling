@@ -30,16 +30,13 @@ This is designed to work with both possible Harvard players. I refer to the "nor
 
 5. run `pipenv run python -m final_project <COMMAND> <TARGET_URL> [--full] [--process_slides]`
     - `<COMMAND>`: one of `download` or `upload`. NOTE: `upload` will start by calling `download`.
-    <br><br>
     
     - `<TARGET_URL>`: the url of a "Recorded Lectures" page on Canvas.\
     Example:
     ![](./imgs/canvas_example_1.jpg)
     Here, the correct `<TARGET_RUL>` is `https://canvas.harvard.edu/courses/69812/external_tools/22940`
-    <br><br>
     
     - `--full`: when set, the full length lectures and slides (if applicable AND wanted) will be downloaded. When not set, each lecture will only download for 1 second and only 2 slides will be downloaded (if applicable AND wanted). This is meant as a test for the user.
-    <br><br>
     
     - `--process_slides`: if the player type is Panopto and this flag is set, slides will be processed (downloaded / uploaded) along with the lectures.
 
@@ -52,7 +49,7 @@ This is designed to work with both possible Harvard players. I refer to the "nor
     - NOTE: I would highly suggest running your command of choice without the `--full` flag to make sure everything is working smoothly. You will need to delete the downloaded/uploaded local (and optinally S3) files before running the command *with* the `--full` flag (luigi can't tell a difference between `short` and `full` files).
 
 
-### How does this work? What are the steps?
+### How does this work? What are the steps it takes?
 
 Before understanding how this program works, we should first ask "how would I download a file manually?" Because explaining this process in text/images would be a terrible expereince for all parties involved, I've recorded a video detailing how to manually download lectures. Here is the link: https://youtu.be/RqG7gyKWVeA
 
@@ -74,7 +71,7 @@ With the understanding that you've watched that video (8min) here's how this wor
 For more information see this brief walkthrough of the functions: https://youtu.be/WGDmAItHTM8
 
 
-### A note on testing
+### A note on testing:
 
 As far as I am aware, it is not possible to test the web scraper in any reasonable way. It's so context dependent that I really don't see how much could be done...
 The `SaveLectureData` luigi task makes very heavy use of the web scraper meaning it is equally untestable. The only potentially testable tasks are the Download/Upload Lecture/Slides. While it is not inconceivable that I test only these, it simply does not make sense in my mind to test such a small working segment on it's own.
