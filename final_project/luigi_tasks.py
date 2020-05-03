@@ -1,6 +1,6 @@
 from luigi import Task, Parameter, BoolParameter, IntParameter, build
 from luigi.local_target import LocalTarget
-from luigi.contrib.s3 import S3Target, S3Client, FileNotFoundException
+from luigi.contrib.s3 import S3Target
 import luigi
 
 import os
@@ -11,13 +11,9 @@ import shutil
 from .globals import *
 CACHE_PATH = os.path.join(DATA_PATH, 'tmp/luigi_cache')
 
-# set S3_ROOT
-if os.getenv('S3_ROOT') is None:
-    raise KeyError('DEBUG: you must set an S3_ROOT variable')
-else:
-    S3_ROOT =  os.getenv('S3_ROOT')
-    if S3Client().is_dir(S3_ROOT) is False:
-        raise FileNotFoundException(f'S3_ROOT ({S3_ROOT}) is not a valid directory')
+# try to set an S3_ROOT variable. this var will only be used if the user decided to "upload"
+# cli.py will make sure this is actually a valid path if the user chose "upload"
+S3_ROOT =  os.getenv('S3_ROOT')
 
 
 from .scrape import *
